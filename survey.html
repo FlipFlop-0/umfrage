@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Umfrage</title>
+</head>
+<body>
+    <div class="survey-container">
+        <h1>Debatten Umfrage</h1>
+        <form id="surveyForm">
+            <label for="stufe">In welche Stufe gehst du?</label>
+            <select id="stufe" name="stufe">
+                <option value="10">10. Klasse</option>
+                <option value="EF">EF</option>
+                <option value="Q2_GK">Q2 (SoWi GK)</option>
+                <option value="Q2_LK">Q2 (SoWi LK)</option>
+            </select>
+
+            <label for="geschlecht">Geschlecht</label>
+            <select id="geschlecht" name="geschlecht">
+                <option value="männlich">Männlich</option>
+                <option value="weiblich">Weiblich</option>
+                <option value="divers">Divers</option>
+                <option value="keine_angabe">Keine Angabe</option>
+            </select>
+
+            <label for="partei">Welche Partei würdest du zur aktuellen Bundestagswahl wählen?</label>
+            <select id="partei" name="partei">
+                <option value="SPD">SPD</option>
+                <option value="CDU">CDU/CSU</option>
+                <option value="FDP">FDP</option>
+                <option value="AFD">AFD</option>
+                <option value="DIE_LINKE">DIE LINKE</option>
+                <option value="GRUENE">BÜNDNIS 90 / DIE GRÜNEN</option>
+            </select>
+
+            <button type="submit" class="btn">Absenden</button>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h2>Vielen Dank für deine Teilnahme!</h2>
+            <p>Deine Umfrageergebnisse sind anonym und werden für die Debatte genutzt.</p>
+            <p><a href="admin_login.html">Zum Admin Login</a></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Umfrageergebnisse</h1>
+
+        <!-- Filter für Geschlecht und Stufe -->
+        <div>
+            <label for="filterStufe">Filter nach Stufe:</label>
+            <select id="filterStufe" onchange="updateChart()">
+                <option value="all">Alle</option>
+                <option value="10">10. Klasse</option>
+                <option value="EF">EF</option>
+                <option value="Q2_GK">Q2 (SoWi GK)</option>
+                <option value="Q2_LK">Q2 (SoWi LK)</option>
+            </select>
+
+            <label for="filterGeschlecht">Filter nach Geschlecht:</label>
+            <select id="filterGeschlecht" onchange="updateChart()">
+                <option value="all">Alle</option>
+                <option value="männlich">Männlich</option>
+                <option value="weiblich">Weiblich</option>
+                <option value="divers">Divers</option>
+                <option value="keine_angabe">Keine Angabe</option>
+            </select>
+        </div>
+
+        <!-- Chart für die Ergebnisse -->
+        <div style="display: flex; justify-content: center; align-items: center; height: 300px;">
+            <canvas id="surveyChart" width="200px" height="200px"></canvas>
+        </div>
+
+        <!-- Reset-Button -->
+        <button class="btn" onclick="resetSurveyData()">Alle Einträge zurücksetzen</button>
+
+        <a href="index.html" class="">Zur Startseite</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

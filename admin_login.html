@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Admin Login</h1>
+        <form id="adminLoginForm">
+            <label for="adminUsername">Username:</label>
+            <input type="text" id="adminUsername" name="adminUsername" required>
+
+            <label for="adminPassword">Passwort:</label>
+            <input type="password" id="adminPassword" name="adminPassword" required>
+
+            <button type="submit" class="btn">Einloggen</button>
+        </form>
+        <a href="survey.html" class=""> Zur Umfrage </a>
+        <div id="errorMessage" class="hidden">
+            <p style="color:red;">Falsche Anmeldedaten!</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
